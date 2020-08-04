@@ -86,8 +86,6 @@ class App extends Application {
       };
     };
 
-    console.log(totalCurrency);
-
     let overflow = calcOverflow(totalCurrency.cp, 10);
     totalCurrency.cp = overflow.remainder;
     totalCurrency.sp += overflow.overflow;
@@ -100,8 +98,6 @@ class App extends Application {
     overflow = calcOverflow(totalCurrency.gp, 10);
     totalCurrency.gp = overflow.remainder;
     totalCurrency.pp += overflow.overflow;
-
-    console.log(totalCurrency);
 
     this.state = {
       activeTab: this.activeTab,
